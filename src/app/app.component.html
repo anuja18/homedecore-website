@@ -1,0 +1,46 @@
+
+
+<!--<app-User><app-User>
+<app-admin></app-admin>
+<app-proceed-to-cart></app-proceed-to-cart> 
+
+
+
+<app-shopping-cart></app-shopping-cart>-->
+<div class="navbar"> 
+    <div> 
+        <a >
+            <img routerLink="" src="../../assets/home1.jpg" style="border-radius: 50%;">
+        </a> 
+    
+    </div>
+    <div>
+     <button class="btn btn-warning dropdown-toggle btn-group-vertical" type="menu"
+      data-toggle = "dropdown" routerLink="/User">
+         User
+      <span class = "caret"></span>
+     </button>
+     <ul class = "dropdown" ></ul>
+     <li><a routerLink="/Registration">Register</a></li>
+     <li><a routerLink="/Login">Login</a></li>
+        
+     
+ 
+ </div>
+ <div>        
+     <a class="btn btn-warning dropdown-toggle btn-group-vertical" type="menu"
+     data-toggle = "dropdown" >
+        Admin
+     <span class = "caret"></span>
+ </a>
+    <ul class ="dropdown"></ul>
+    <li><a  routerLink="/Admin" >Admin Account</a></li>
+   
+ </div>
+ <div>
+     <button routerLink="/proceed-to-cart" type="button" class="btn btn-warning">Proceed To Cart</button>
+ </div>
+</div>
+
+
+<router-outlet></router-outlet>

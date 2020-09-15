@@ -1,0 +1,65 @@
+<div>
+   
+
+      <br/>
+  
+  <div class="contanier" align="center" >
+  
+      <div *ngFor ="let shopping_product of shopping_products" >
+  
+      <img [src]="shopping_product.imgPath" [alt]="shopping_product.imgName" class="img">
+  
+      <h4>
+      <a [title]="shopping_product.name +'details'">
+          {{shopping_product.name}}
+      </a>
+        
+  
+</h4>
+        
+     <a [title]="shopping_product.original_priceprice+'details'">
+       M.R.P:<s>&#8377;{{shopping_product.original_price}} </s>   
+     </a>
+     
+     <h6 [title]="shopping_product.price+'details'">
+      Price:&#8377;{{shopping_product.price}}
+     <br/> <label style="background-color: yellow; width: fit-content;">save 5% </label> with coupon
+     </h6>
+  
+     <div [innerHTML]="shopping_product.Description" *ngIf="shopping_product.Description">
+         
+      
+  </div>
+  
+  <label>Qty:</label>
+  <select>
+      
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    
+      
+  </select>
+  <br/>
+  <button value="submit" class="btn btn-primary" >Add To Cart</button>
+  
+  </div>
+  <br/><br/>
+  </div>
+
+  
+
+  </div>
+
+  
+  
+
+
+  
