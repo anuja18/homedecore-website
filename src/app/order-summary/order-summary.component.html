@@ -1,0 +1,23 @@
+<label for="orderId"> OrderId: {{order.id}} </label>
+
+<div *ngFor ="let cart of order.items " >
+
+    <img [src]="cart.imgPath"class="img">
+       
+   <h4>
+       <a [title]="cart.name +'details'">
+           {{cart.name}}
+       </a>
+   </h4>
+   
+   <h6 [title]="cart.price+'details'">
+       Price:&#8377;{{cart.price}}
+   </h6>       
+   
+   
+   </div>
+   
+   
+   <h6 [title]='totalPrice'>
+       totalPrice:&#8377;{{totalPrice}}
+   </h6>

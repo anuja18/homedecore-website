@@ -12,6 +12,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { LoginComponent } from './login/login.component';
 import { LogOutComponent } from './log-out/log-out.component';
 import { UserOrderListComponent } from './user-order-list/user-order-list.component';
+import { OrderSummaryComponent } from './order-summary/order-summary.component';
 
 const routes: Routes = [
   { path: '', component:ShoppingCartComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'Registration',component:RegistrationComponent},  
   {path:'Login',component:LoginComponent},
   {path:'log-out',component:LogOutComponent},
-  {path:'user-order-list',component:UserOrderListComponent}
+  {path:'user-order-list',component:UserOrderListComponent},
+  {path:'order/:id',component:OrderSummaryComponent}
 ];
 
 @NgModule({

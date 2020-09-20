@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {DropDownButtonModule} from '@syncfusion/ej2-angular-splitbuttons';
 import { enableRipple } from '@syncfusion/ej2-base';
 import {HttpClientModule} from '@angular/common/http'
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,10 +13,11 @@ import { UserComponent } from './user/user.component';
 import { ProceedToCartComponent } from './proceed-to-cart/proceed-to-cart.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from  './in-memory-data.service';
+
 import { LoginComponent } from './login/login.component';
 import { LogOutComponent } from './log-out/log-out.component';
 import { UserOrderListComponent } from './user-order-list/user-order-list.component';
+import { OrderSummaryComponent } from './order-summary/order-summary.component';
 
 
 enableRipple(true);
@@ -33,13 +35,15 @@ enableRipple(true);
     RegistrationComponent,
     LoginComponent,
     LogOutComponent,
-    UserOrderListComponent
+    UserOrderListComponent,
+    OrderSummaryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DropDownButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
 
     

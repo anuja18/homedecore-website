@@ -14,6 +14,8 @@ export class LogOutComponent implements OnInit {
   }
 
   logoutt(){
+    window.localStorage.setItem("isLogged","false");
+    window.localStorage.setItem("sessionId",'');
     alert("Successfully Logout.......");
     }
 

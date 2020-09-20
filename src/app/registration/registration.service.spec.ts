@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { InMemoryDataService } from './in-memory-data.service';
+import { RegistrationService } from './registration.service';
 
-describe('InMemoryDataService', () => {
-  let service: InMemoryDataService;
+describe('RegistrationService', () => {
+  let service: RegistrationService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(InMemoryDataService);
+    service = TestBed.inject(RegistrationService);
   });
 
   it('should be created', () => {

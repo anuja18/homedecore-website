@@ -7,16 +7,16 @@
         
     
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+        <input [(ngModel)]="email" type="text" placeholder="Enter Email" name="email" id="email" required>
         <br>
     
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <input [(ngModel)]="password" type="password" placeholder="Enter Password" name="psw" id="psw" required>
         <br>
     
         
 
-        <button type="submit" routerLink="/user-order-list" class="btn btn-primary" (click)="Login()">
+        <button type="submit" class="btn btn-primary" (click)="login()">
             Login
             
           </button>

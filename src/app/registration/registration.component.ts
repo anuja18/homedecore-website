@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgIf } from '@angular/common';
-import {NgModule} from '@angular/core';
+import {RegistrationService,User} from './registration.service';
+import {Router} from '@angular/router';
+import {v4} from 'uuid';
 
 @Component({
   selector: 'app-registration',
@@ -8,22 +9,22 @@ import {NgModule} from '@angular/core';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
-  constructor() { }
+   user : User=new User();
+  constructor(private registration:RegistrationService,private router:Router) { }
 
   ngOnInit(): void {
   }
-
-   Terms(){
-            alert("Terms And Conditions..");
-
-   }
-   
-
-  Registered(){
-     
-       alert("Register with our Website"); 
+  Terms(){
 
   }
+
+  createUser():void{
+    this.user.id=v4();
+    console.log(this.user);
+   this.registration.createUser(this.user).subscribe(()=>this.router.navigate([''])); 
+  
+}
+
+  
 
 }

@@ -5,7 +5,7 @@
   
   <div class="contanier" align="center" >
   
-      <div *ngFor ="let shopping_product of shopping_products" >
+      <div *ngFor ="let shopping_product of products" >
   
       <img [src]="shopping_product.imgPath" [alt]="shopping_product.imgName" class="img">
   
@@ -32,7 +32,7 @@
   </div>
   
   <label>Qty:</label>
-  <select>
+  <select >
       
       <option>1</option>
       <option>2</option>
@@ -48,7 +48,7 @@
       
   </select>
   <br/>
-  <button value="submit" class="btn btn-primary" >Add To Cart</button>
+  <button  value="submit" class="btn btn-primary" (click)="addd(shopping_product.id)">Add To Cart</button>
   
   </div>
   <br/><br/>
